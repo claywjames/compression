@@ -61,13 +61,13 @@ class leaf_hnode : public hnode {
 public:
 
     const unsigned char character;
-    leaf_hnode(unsigned long long f, char c) : hnode(f), character(c) {}
+    leaf_hnode(unsigned long long f, unsigned char c) : hnode(f), character(c) {}
 
     //encodes a preorder traversal of the tree to out
     void writeTree(byteBuffer & b, std::ostream & out) const {
 
         b.write(true, out);
-        b.write((char) character, out);
+        b.write(character, out);
 
     }
 

@@ -6,7 +6,7 @@
 class byteBuffer {
 private:
 
-    char writeBuffer, readBuffer;
+    unsigned char writeBuffer, readBuffer;
     int bitsWritten, bitsRead;
 
 public:
@@ -14,12 +14,12 @@ public:
     byteBuffer() :  writeBuffer(0), readBuffer(0), bitsWritten(0), bitsRead(0) {}
 
     void write(bool bit, std::ostream & output);
-    void write(char byte, std::ostream & output);
+    void write(unsigned char byte, std::ostream & output);
 
     void outputBuffer(std::ostream & output);
 
     bool read(std::istream & input);
-    char readByte(std::istream & input);
+    unsigned char readByte(std::istream & input);
 
 };
 
